@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head><title>Quote Generator</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quote Generator</title>
+</head>
 <body>
+  <h1>Random Quote Generator</h1>
   <p id="quote">Click the button for a quote!</p>
-  <button onclick="newQuote()">New Quote</button>
+  <button id="quoteBtn">New Quote</button>
 
   <script>
-    const quotes = ["you're doing good!", "be optimistic!", "believe in yourself!,"die with memories,not dreams","make today amazing"];
-    function newQuote() {
+    const quotes = [
+      "Keep going!",
+      "You can do it!",
+      "Believe in yourself.",
+      "Stay positive!",
+      "Make it happen!"
+    ];
+
+    document.getElementById("quoteBtn").addEventListener("click", function() {
       const random = Math.floor(Math.random() * quotes.length);
       document.getElementById("quote").innerText = quotes[random];
-    }
+    });
   </script>
 </body>
 </html>
